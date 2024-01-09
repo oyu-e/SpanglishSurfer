@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Spanglish Surfer",
+    "version": "1.0",
+    "description": "Translates random words of webpage into Spanish.",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}
