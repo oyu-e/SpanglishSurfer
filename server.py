@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import spacy
 from unidecode import unidecode
+import numpy as np
 
 app = Flask(__name__)
 nlp = spacy.load("es_core_news_sm")
@@ -35,4 +36,4 @@ def translate_and_fill_blank():
     return jsonify({"translated_text": spanish_translation, "omitted_verb": None})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=6000)
+    app.run(host="0.0.0.0", port=8080)

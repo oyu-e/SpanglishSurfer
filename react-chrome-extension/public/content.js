@@ -21,7 +21,7 @@ async function handleTextSelection() {
       console.log("Highlighted text:", selectedText);
 
       // Send the selected text to the Python server
-      const response = await fetch('http://localhost:6000/translate', {
+      const response = await fetch('http://localhost:8080/translate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
